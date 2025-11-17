@@ -7,6 +7,7 @@ import Car from './App';
 import { Second } from './App';
 import Demo , {Demo2} from './testing';
 import LoginPage from './logintest';
+import Screen from './screen/demo';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -17,8 +18,10 @@ root.render(
     <Car2></Car2>
     <Header></Header> */}
     {/* <Demo  pr={"delhi"}></Demo>
-    <Demo2 pr={"noida"}></Demo2> */}
+    // <Demo2 pr={"noida"}></Demo2> */}
     <LoginPage></LoginPage>
+    
+{/* <Screen></Screen> */}
   </React.StrictMode>
 );
 
