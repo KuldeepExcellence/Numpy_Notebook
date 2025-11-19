@@ -1,17 +1,46 @@
 import React, { useState } from "react";
+import { firebaseConfig } from "./firebase";
+import axios from "axios";
+
+
 
 const LoginPage = () => {
   // State variables for input fields
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [sessionInfo, setSessionInfo] = useState("");
 
   // Function to handle button click
   const handleLogin = () => {
+    console.log(firebaseConfig.apiKey)
+
+
+    const sendOTP = async () => {
+      try {
+        const res = await axios.post(
+          `https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=${firebaseConfig.apiKey}`,
+          {
+            requestType: "EMAIL_SIGNIN",
+            email: email,
+            "continueUrl": "http://localhost:3000/verify",
+            "canHandleCodeInApp": true
+          }
+        );
+  
+        setSessionInfo(res.data.sessionInfo);
+        alert("OTP sent to your email!");
+      } catch (err) {
+        console.error(err);
+        alert("Error sending OTP");
+      }
+    };
+    
     if (!email || !password) {
       alert("Please fill in both fields");
       return;
     }
     // Log data to console (replace with actual login logic)
+    sendOTP()
     console.log("Email:", email);
     console.log("Password:", password);
     alert(`Login attempted with:\nEmail: ${email}\nPassword: ${password}`);

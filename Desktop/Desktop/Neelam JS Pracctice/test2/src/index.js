@@ -8,6 +8,7 @@ import { Second } from './App';
 import Demo , {Demo2} from './testing';
 import LoginPage from './logintest';
 import Screen from './screen/demo';
+import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -19,7 +20,9 @@ root.render(
     <Header></Header> */}
     {/* <Demo  pr={"delhi"}></Demo>
     // <Demo2 pr={"noida"}></Demo2> */}
-    <LoginPage></LoginPage>
+    
+    {/* <LoginPage></LoginPage> */}
+    <App></App>
     
 {/* <Screen></Screen> */}
   </React.StrictMode>
