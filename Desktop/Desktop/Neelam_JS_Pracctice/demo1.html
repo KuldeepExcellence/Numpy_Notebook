@@ -1,0 +1,773 @@
+
+<!-- <button onclick="stopInterval()"> Stop Timer </button>
+<button onclick="test()"> Start Again </button> -->
+
+
+<!-- 
+<button onclick="stop()"> Stop Timer </button>
+<input id = "tx">
+<button onclick="start()"> Start Again </button>
+
+<br>
+<br>
+<input id = "time">  -->
+
+
+<script>
+    // var a = 10 
+    // var b = 3
+    // var c = a%b     // mod   = 10/3   --> reminder 1
+    // var d = a/b    // division    10/3 3.33
+    // console.log(c)
+    // console.log(d)
+
+    // var a = true // true , false :- boolean value
+    // var b = false
+
+    // console.log(!a)    // logical NOT  
+
+    // console.log(a||b)    // Logical OR 
+
+
+    // console.log(a||b)   // logical And
+
+    // console.log(!a)
+
+
+
+    // Control Statments :- these are the statement or code blocks that are used to control the 
+    // flow of control of the program 
+
+    // constrol statment :- 1. conditional statment 2. Looping Statement  3. Jump statment  
+
+    // console.log("hello")
+    // console.log("world")   
+    // console.log("new Delhi")
+
+    // 1. Considtional Statment // these are the statment that are used to run a line block of code after checking a perticular condition . 
+
+
+    // var age = 18
+    // if(age>18)  // is this is true if block will run , and if this is false than else condition will run 
+    // {
+    //     console.log("You are a valid voter ")
+    // }
+    // else  //  no requirment to put any condition in else statment
+    // {
+    //     console.log("You are not a valid voter")
+    // }
+
+
+    // Number = 344 :- Even , odd 
+
+// -> true , false 
+
+// Simple IF-else Statement
+// Ladder if 
+// Nested if
+
+// write a program to check a number is even or odd
+
+
+// var a =6 
+// if(a%2==0)
+// {
+//     console.log("even")
+// }
+// else{
+//     console.log("odd")
+// }
+
+
+// number to check if it positive or negative
+
+// var a =0
+// if(a<0)
+// {
+//     console.log("negative number ")
+// }
+// else if (a==0)
+// {
+//     console.log("number is Zero")
+
+// }
+// else{
+//     console.log("positive number ")
+// }
+
+
+// >90 A 
+// 80-90 B 
+// 60-80 c 
+// <60 D
+
+
+// var a =80
+
+// if (a>90 && a<100){
+//     console.log("A")
+// }
+// else if (a>80 && a<=90)
+// {
+//     console.log("B")
+// }
+// else if (a>60 && a<=80 )
+// {
+//     console.log("C")
+
+// }
+// else if (a>=0 )
+// {
+//     console.log("D")
+// }
+// else{
+//     console.log("enter a valid number ")
+// }
+
+
+
+// Settimeout :- 
+
+// var count = 0 
+
+// function test()
+// {
+//     // alert("This is my Test Function "+count)
+//     // document.write("Set Interval is Working ")
+//     // document.write(count)
+//     console.log("Set Interval is working"+count)
+//     count++
+
+
+// }
+
+// var interval = setInterval(test , 200)
+
+
+
+
+
+// function stopInterval()
+// {
+//     // clearTimeout(timeout)
+//     clearInterval(interval)
+    
+// }
+
+// function startagain()
+// {
+
+// var interval = setInterval(test , 200)
+
+
+// }
+
+
+// for (var i =12 ; i >10 ; i ++)
+// {
+//      document.write("Set Interval is Working ")
+//     document.write(i)
+    
+// }
+
+
+// var timeout = setTimeout(test , 5000 )
+
+
+
+// function stoptimer()
+// {
+//     clearTimeout(timeout)
+//     document.write(" Settime out function is stoped now it will not work")
+
+// }
+
+
+
+// let count = 0 
+// let timeout ; 
+// let timer_on = 0 ;
+
+// function startcount()
+// {
+//     document.getElementById("tx").value = count
+//     console.log(count)
+//     count++
+  
+// // Recursion of function 
+// timeout = setTimeout(startcount,1000) 
+
+
+// }
+
+
+// function start()
+// {
+//     if (!timer_on)
+//     {
+//         timer_on=1
+//         startcount()
+//     }
+
+// }
+
+// function stop()
+// {
+// clearTimeout(timeout);
+// timer_on = 0 ;
+// }
+
+
+// const myInterval = setInterval(myTimer , 1000);
+
+// function myTimer()
+// {
+//     const date = new Date();
+//     document.getElementById("time").value = date.toLocaleTimeString();
+// }
+
+
+// Object - Function - Prototype - Classes .
+
+//  Object :- JSON :- Java Script Object notation . 
+// XML-> Extensible Markup Langugae 
+
+
+
+
+
+
+//  Object :- JSON :- Java Script Object notation .
+
+// first method to create a object is using curly braces {}
+// var obj = {firstname:"kuldeep", lastname:"sharma"}
+// console.log(obj)
+
+// console.log(obj.firstname)
+// console.log(obj.lastname)
+
+
+// second method to create a object is using Object class 
+
+// const student = new Object()
+// console.log(student)
+
+// student.firstname="Kuldeep"
+// student.rollno = 10 
+// student.course="JavaScript"
+
+// console.log(student)
+
+
+// Third Method To Create a JavaScript Object by using a constructor function
+
+
+// function sum(a,b)
+// {
+//     c=a+b
+//     return c 
+// }
+
+// sum(10,20)
+
+// // object constructor function 
+// function Person(age,name,city)  // local variable :- parameters
+// {
+//     this.age=age
+//      // this :- this is a storage for the object reference 
+//      // for example if obj1 is used to call this function then < this > will store the reference address of obj1
+
+
+//     this.name =name
+//     this.city=city
+// }
+
+
+// var obj1=new  Person(20,"abhishek","delhi")
+// var obj2=new  Person(18,"rahul","bhopal")
+// var obj3=new  Person(21,"daksh","mohali")
+
+// console.log(obj1)
+// console.log(obj2)
+// console.log(obj3)
+
+
+// var obj = 
+// {
+//     firstname:"Kuldeep",
+//     lastname:"Sharma",
+//     age : 10,
+//     showdata :function ()
+//     {
+//         console.log( "Hello "+this.firstname +" "+this.lastname +" Welcome To JS Class")
+//     }      
+//     , 
+//     checkage : function()
+//     {
+//         if (this.age>18)
+//         {
+//             console.log("You are Valid for Voting")
+//         }
+//         else{
+//             console.log("You Are Not valid for voting")
+//         }
+//     }
+// }
+
+// console.log(obj)
+
+// obj.showdata()
+
+// obj.checkage()
+
+
+// default values 
+// function Person(age,name,city)  
+// {
+//     this.age=age
+//     this.name =name
+//     this.city=city
+//     this.mother="Sita"
+//     this.father="Ram"
+// }
+// var obj1=new  Person(20,"abhishek","delhi")
+// var obj2=new  Person(18,"rahul","bhopal")
+// var obj3=new  Person(21,"daksh","mohali")
+// console.log(obj1)
+// console.log(obj2)
+// console.log(obj3)
+// console.log("hello world")
+
+
+// obj = {}
+// console.log(obj)
+
+// function Person(age,name,city)  
+// {
+//     this.age=age
+//     this.name =name
+//     this.city=city
+//     this.mother="Sita"
+//     this.father="Ram"
+// }
+// var obj1=new  Person(20,"abhishek","delhi")
+// obj2={}
+// Object.assign(obj2,obj1)
+// console.log(obj1)
+// console.log(obj2)
+
+
+
+// Object Inbuild Methods . 
+
+
+
+
+// function Person(age,name,city)
+// {
+//     this.age=age
+//     this.name =name
+//     this.city=city
+// }
+
+
+// var obj1=new  Person(20,"abhishek","delhi")
+// obj2={}
+// Object.assign(obj2,{one:obj1.age,two:obj1.name})
+
+// console.log(obj2)
+
+// obj3 = Object.create(obj1)
+// console.log(obj3)
+// console.log(obj3.age)
+// console.log(obj3.name)
+// console.log(obj3.city)
+
+// var obj2=new  Person(18,"rahul","bhopal")
+// var obj3=new  Person(21,"daksh","mohali")
+
+// console.log(obj1)
+// console.log(obj2.age)
+// console.log(obj3)
+
+
+
+// Assign , Create 
+
+
+
+
+// obj1 = {name:"Kuldeep",city:"Delhi"}
+// obj2={one:[obj1.name]}
+
+// console.log(obj1.name)
+// console.log(obj2)
+
+
+
+
+
+
+
+// function Person(age,name,city)
+// {
+//     this.age=age
+//     this.name =name
+//     this.city=city
+// }
+// var obj1=new  Person(20,"abhishek","dlhi")
+// console.log(obj1)
+// var all_keys = Object.keys(obj1)  // these two function is used to extract data from object in keys , and values format  
+// var all_value = Object.values(obj1) //
+// console.log(all_keys)
+// console.log(all_value)
+// for( var i of all_value)
+// {
+//     console.log(i)
+// }
+// Object to Array 
+// var obj1=new  Person(20,"abhishek","delhi")
+// console.log(Object.entries(obj1))  
+// var array = [["one",1],["two",2],["three",3]]
+// Array to Object 
+// var obj = Object.fromEntries(array)
+// console.log(array)
+// console.log(obj)
+
+
+//   JavaScript Object Accessors
+
+// var obj1 = {
+
+//     name:"kuldeep",
+//     age:50,
+//     city:"New Delhi",
+//     getdata :function()
+//     {
+//         console.log(this.name)
+// console.log(this.age)
+// console.log(this.city)
+
+//     },
+    
+//     set change_name(name)
+//     {
+//         this.name = name
+
+//     },
+//     get data()
+//     {
+//         console.log("This is my Get Accessor")
+//         console.log(this.name.toUpperCase())
+// console.log(this.age)
+// console.log(this.city.toLowerCase())
+
+//     }
+
+// }
+
+// obj1.getdata()
+// obj1.data
+
+// console.log(obj1.name)
+// console.log(obj1.age)
+// console.log(obj1.city)
+
+// obj1.data
+// obj1.change_name="Mohit"
+// obj1.data
+
+// class Car {
+//   constructor(name, year) {
+//     this.name = name;
+//     this.year = year;
+//   }
+//   age() {
+//     date = new Date();  // This will not work
+//     // const date = new Date(); // This will work
+//     return date.getFullYear() - this.year;
+//   }
+// }
+
+// obj = new Car("Swift",2015)
+// console.log(obj)
+
+// class Car {
+//   constructor(brand) {
+//     this.carname = brand;
+//   }
+//   get cnam() {
+//     return this.carname;
+//   }
+//   set cnam1(x) {
+//     this.carname = x;
+//   }
+// }
+
+// const myCar = new Car("Ford");
+// myCar.cnam1 = "Kuldeep"
+
+// console.log( myCar.cnam);
+
+// class Car {
+//   constructor(name,age) {
+//     this.n = name;
+//     this.age=age;
+//   }
+//   static hello(obj) {
+//     return "Hello!!"+obj.n+obj.age;
+//   }
+// }
+
+// const myCar = new Car("Ford",25);
+
+// // You can call 'hello()' on the Car Class:
+// console.log(Car.hello(myCar));
+
+// class Maruti
+// { 
+//     constructor(name,colour)
+//     {
+//         this.name=name;
+//         this.colour=colour;
+//     }
+// }
+
+// class Swift extends Maruti
+// {
+//     constructor(name,colour,price)
+//     {
+//         super(name,colour)
+//         this.price = price
+//     }
+// }
+// class Baleno extends Maruti
+// {
+//     constructor(name,colour,speed)
+//     {
+//         super(name,colour)
+//         this.speed = speed
+//     }
+// }
+
+// obj = new Swift("a","b","c")
+// console.log(obj)
+
+// obj2 = new Baleno("a","b","c","d")
+// console.log(obj2)
+
+
+
+
+// console.log("hello world")
+
+// OOP :- Object Oriented Programming .
+
+
+// obj = {name:"kuldeep"}
+
+class Student // student is your class 
+{
+    // name = "kuldeep";
+    // city = "New Delhi";
+    constructor(name,city)  // this is your consructor 
+    {
+        this.name = name;
+        this.city = city;
+
+    }
+    showdata() // show data is your method 
+    {
+        console.log("this is my show data function ")
+        console.log(this.name)
+        console.log(this.city)
+    }
+}
+
+class Sports extends Student
+{
+    constructor(sports , name , city)
+    {
+        // super(name,city)
+        super(name,city)
+        this.sports=sports
+        
+    }
+    sportsfunction()
+    {
+        console.log("this is my sports function ")
+        console.log("this is my child class ")
+        console.log(this.name)
+        console.log(this.city)
+    }
+}
+
+
+
+
+// obj1 = new Student("kuldeep","delhi")
+
+// obj2 = new Student("rakesh","mohali")
+// obj3 = new Student("gotam","ambala")
+
+
+// console.log(obj1)
+// console.log(obj2)
+// console.log(obj3)
+// obj1.showdata()
+// obj2.showdata()
+// obj3.showdata()
+
+
+
+
+
+
+// obj1 = new Sports("hockey","rahul","new delhi")
+
+// console.log(obj1)
+// obj1.showdata()
+// obj1.sportsfunction()
+
+
+// function function1()
+// {
+//     console.log("hello world")
+// }
+
+// function function2()
+// {
+//     console.log("how are you")
+// }
+
+
+
+// setTimeout(function1,2000)
+// setInterval(function2,1000)
+// setTimeout(function1,4000)
+
+
+
+
+
+
+
+
+
+
+// CallBack Functions . 
+
+// count = 0 
+// function cons()
+// {
+
+//     count+=1
+//     console.log(count)
+// }
+
+
+// setInterval(cons,1000)
+
+// function cons()
+// {
+
+//     count+=1
+//     console.log(count)
+// }
+
+
+
+
+
+
+// function first()
+// {
+//     console.log("this is my first function ")
+//     two()
+
+// }
+
+// function two()
+
+// {
+//     console.log("this is my second function ")
+// }
+
+
+// first()
+
+
+// function square(a)
+// {
+
+//     sq= a*a
+//     console.log(sq)
+// }
+
+// function sum()
+// {
+//     a=10 
+//     b=20
+//     c=a+b
+//     return c 
+// }
+
+
+// ans = sum()
+// square(ans)
+
+
+
+
+
+
+// function square(a)
+// {
+
+//     sq= a*a
+//     console.log(sq)
+// }
+
+// function sum()
+// {
+//     a=10 
+//     b=10
+//     c=a+b
+//     square(c)
+// }
+
+// sum()
+
+// ans = sum()
+// square(ans)
+
+
+
+
+
+function sq(a)
+{
+
+    sq= a*a
+    console.log(sq)
+}
+
+function sum(a,b,func)
+{
+   
+    c=a+b
+    func(c)
+}
+
+
+a=5
+b=5
+sum(a,b,sq)
+
+
+
+
+// </script>
+
+
+
